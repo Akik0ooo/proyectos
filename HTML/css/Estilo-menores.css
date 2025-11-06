@@ -1,0 +1,233 @@
+/* Estilos específicos para la versión de menores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(140deg, #a8edea 0%, #fed6e3 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container-menores {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header para menores */
+.header-menores {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease;
+}
+
+.header-menores h1 {
+    color: #285e91;
+    margin-bottom: 0.5rem;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+}
+
+.subtitulo {
+    color: #5a67d8;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+/* Formulario para menores */
+.formulario-menores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.tarjeta-formulario {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    animation: slideUp 0.8s ease;
+}
+
+.tarjeta-formulario h2 {
+    color: #ff8c5f;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.campo-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #5a67d8;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f7fafc;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: #5a67d8;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    padding: 0.9rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-joven {
+    background: linear-gradient(135deg, #e07043 0%, #f87a40 100%);
+}
+
+.btn-joven:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.enlaces-jovenes {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.enlaces-jovenes p {
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+}
+
+.enlaces-jovenes a {
+    color: #5a67d8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.enlaces-jovenes a:hover {
+    text-decoration: underline;
+}
+
+/* Elementos decorativos */
+.decoracion-menores {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.elemento-decorativo {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.elemento-1 {
+    width: 100px;
+    height: 100px;
+    background-color: #fa975d;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.elemento-2 {
+    width: 150px;
+    height: 150px;
+    background-color: #5a67d8;
+    bottom: 15%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.elemento-3 {
+    width: 80px;
+    height: 80px;
+    background-color: #48bb78;
+    top: 50%;
+    left: 15%;
+    animation-delay: 4s;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container-menores {
+        padding: 1rem;
+    }
+    
+    .header-menores h1 {
+        font-size: 2.2rem;
+    }
+    
+    .tarjeta-formulario {
+        padding: 1.5rem;
+    }
+    
+    .elemento-decorativo {
+        display: none;
+    }
+}
